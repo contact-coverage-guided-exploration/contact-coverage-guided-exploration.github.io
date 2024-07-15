@@ -97,7 +97,7 @@
               </span>
               <span>Paper</span>
             </a>
-            <a class="navbar-item  pl-4 pr-4" href="./static/umi-on-legs.pdf">
+            <a class="navbar-item  pl-4 pr-4" href="https://arxiv.org/abs/2407.10353">
               <span class="icon" style="margin-right:5px;">
                 <img src="./static/images/arxiv.svg" alt="ArXiv" />
               </span>
@@ -142,7 +142,7 @@
             </a>
           </span>
           <span class="link-block">
-            <a href="./static/umi-on-legs.pdf" class="external-link button is-normal is-rounded is-dark">
+            <a href="https://arxiv.org/abs/2407.10353" class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
                 <img src="./static/images/arxiv.svg" alt="ArXiv" />
               </span>
@@ -227,17 +227,17 @@
   </div>
 </section>
 
-<!-- 
-<section class="section is-medium" id="video">
+
+<section class="section" id="video">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <iframe width="800px" height="400px" src="https://www.youtube.com/embed/T4tDy5y_6ZM?si=I3Jw_yhaPfjkkCst"
-        title="UMI on Legs Technical Summary Video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <h2 class="title is-1 has-text-centered is-size-4-mobile">Technical Summary Video</h2>
+    <iframe width="100%" style="aspect-ratio: 16 / 9;" src="
+      https://www.youtube.com/embed/4Bp0q3xHTxE?si=ocAPm8KVAz-RZK59" title="UMI on Legs Technical Summary Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-</section> -->
+</section>
 
 <section class="section is-small" id="umi">
   <div class="container is-max-desktop">
@@ -636,7 +636,28 @@
           </p>
         </div>
 
-        <div id="improvement-qa" class="block">
+        <div class="block">
+          <h3 class="title is-6">
+            I want to build a foundation policy for robotics.
+            What can UMI on Legs teach me about how to go about it?
+          </h3>
+          <p>
+            Tossing was flashy, but the in-the-wild cup rearrangement task (shown below) changed my perspective on what
+            a foundation policy for robotics should look like.
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/cup-in-the-wild-small.mp4" type="video/mp4">
+            </video>
+            We were able to just plug-and-play UMI's publicly released policy onto our robot dog!
+            With an expressive embodiment-agnostic interface in place, I'm optimistic about a world where people can
+            separately develop ever more general
+            visuo-motor policies and ever more robust WBCs, knowing that they can be plugged-and-played together in the
+            end.
+
+          </p>
+        </div>
+
+
+        <div class="block">
           <h3 class="title is-6">
             Can learning to track end-effector trajectories <i>really</i> result in kettlebell pushing?
           </h3>
@@ -653,6 +674,7 @@
             training could address take us a step closer to more robust pushing behaviors.
           </p>
         </div>
+
 
         <div id="visualization-qa" class="block">
           <h3 class="title is-6">What simulator do you use? Why does it look so realistic?</h3>
