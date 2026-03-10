@@ -285,56 +285,43 @@
   <div class="container is-max-widescreen">
     <h2 class="title is-2 has-text-centered is-size-4-mobile">Real-World Results</h2>
     <p class="real-world-subtitle has-text-centered">
-      We evaluate the object singulation task in the real world with randomized target object. Videos are shown at 1x speed.
+      We distill the simulation oracle policy into a vision-based policy and evaluate real-world object singulation with randomized target objects. Videos are shown at 1x speed.
     </p>
+    <div class="real-world-controls">
+      <span class="real-world-label">Select trial</span>
+      <div class="real-world-buttons" role="group" aria-label="Select trial">
+        <button class="real-world-button is-active" type="button" data-real-trial="success_1">Trial 1</button>
+        <button class="real-world-button" type="button" data-real-trial="success_2">Trial 2</button>
+        <button class="real-world-button" type="button" data-real-trial="success_3">Trial 3</button>
+      </div>
+    </div>
 
     <div class="real-world-card">
-      <div class="real-world-card-header">
-        <div class="real-world-card-title">Baseline Policy</div>
-        <button class="replay-button" type="button" data-replay-target="#real-baseline" aria-label="Replay baseline videos">
-          <i class="fas fa-rotate-right"></i>
-        </button>
-      </div>
-      <div class="real-world-grid" id="real-baseline">
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_1/success_1-1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_1/success_1-2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_1/success_1-3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="real-world-card-header">
-        <div class="real-world-card-title">CCGE Policy (Ours)</div>
-        <button class="replay-button" type="button" data-replay-target="#real-ours" aria-label="Replay CCGE videos">
-          <i class="fas fa-rotate-right"></i>
-        </button>
-      </div>
-      <div class="real-world-grid" id="real-ours">
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_2/success_2-1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_2/success_2-2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="real-world-tile">
-          <video autoplay muted playsinline preload="metadata">
-            <source src="./ccge_media/real/success_2/success_2-3.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="real-world-grid">
+        <figure class="real-world-tile">
+          <div class="real-world-media">
+            <video autoplay muted playsinline preload="metadata" data-real-world-view="1">
+              <source src="./ccge_media/real/success_1/success_1-1_web.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption class="real-world-caption">Global view</figcaption>
+        </figure>
+        <figure class="real-world-tile">
+          <div class="real-world-media">
+            <video autoplay muted playsinline preload="metadata" data-real-world-view="2">
+              <source src="./ccge_media/real/success_1/success_1-2_web.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption class="real-world-caption">Side view</figcaption>
+        </figure>
+        <figure class="real-world-tile">
+          <div class="real-world-media">
+            <video autoplay muted playsinline preload="metadata" data-real-world-view="3">
+              <source src="./ccge_media/real/success_1/success_1-3_web.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption class="real-world-caption">Top-down view</figcaption>
+        </figure>
       </div>
     </div>
   </div>
