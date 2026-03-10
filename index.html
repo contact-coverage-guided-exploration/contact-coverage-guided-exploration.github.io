@@ -177,7 +177,7 @@
         <li><a href="#real">Real-World Results</a></li>
         <li><a href="#abstract">Abstract</a></li>
         <li><a href="#method">Method</a></li>
-        <li><a href="#video">Video</a></li>
+        <li><a href="#experiment">Experiment</a></li>
       </ul>
     </nav>
   </div>
@@ -191,7 +191,12 @@
     <h2 class="title is-2 has-text-centered is-size-4-mobile">Motivation</h2>
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-justified">
-        <!-- Add motivation content here. -->
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/Z_i6IHm1LIU" title="CCGE Motivation"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -275,7 +280,7 @@
     <h2 class="title is-2 has-text-centered is-size-4-mobile">Abstract</h2>
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-justified is-hidden-mobile">
-        <p class="subtitle">
+        <p class="content">
           Deep Reinforcement learning (DRL) has achieved remarkable success in domains with well-defined reward
           structures, such as Atari games and locomotion. In contrast, dexterous manipulation lacks general-purpose
           reward formulations and typically depends on task-specific, handcrafted priors to guide hand–object
@@ -323,6 +328,13 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-2 has-text-centered is-size-4-mobile">Method</h2>
+
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/VSxV4YBePuU" title="CCGE Method"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <div class="content">
           <p>
             CCGE proposes a contact-coverage guided exploration method 
@@ -330,9 +342,7 @@
             a learned state hashing module that discretizes continuous object states into compact state clusters, 
             a contact coverage counter that records state-conditioned finger–region interactions, and a structured exploration reward.
           </p>
-        </div>
-        <img src="./static/images/ccge_overview_update.png" alt="ccge_overview_update" />
-
+        </div>        
         <div class="content">
           <p>
             The exploration reward is further decomposed into a contact coverage reward, 
@@ -341,6 +351,7 @@
             facilitating efficient contact discovery before physical interaction occurs. The current object state and the goal state are visualized as colored point clouds, 
             with colors indicating different object surface regions.
           </p>
+          <img src="./static/images/ccge_overview_update.png" alt="ccge_overview_update" />
         </div>
       </div>
     </div>
@@ -348,7 +359,24 @@
 </section>
 
 
-<section class="section" id="video">
+<section class="section is-medium" id="experiment">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2 has-text-centered is-size-4-mobile">Experiment</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/hrMz8_SDzhQ" title="CCGE Experiment"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="video">
   <div class="container is-max-widescreen">
     <h2 class="title is-1 has-text-centered is-size-4-mobile">Technical Summary Video</h2>
     <iframe width="100%" style="aspect-ratio: 16 / 9;" src="
@@ -357,7 +385,7 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
