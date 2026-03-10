@@ -191,6 +191,10 @@
     <h2 class="title is-2 has-text-centered is-size-4-mobile">Motivation</h2>
     <div class="columns is-centered">
       <div class="column is-four-fifths has-text-justified">
+        <p class="content has-text-centered">
+          CCGE is a general-purpose exploration reward for dexterous manipulation that encourages diverse finger–object
+          contact patterns by tracking state-conditioned contact coverage. It improves training efficiency and task success rate.
+        </p>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/Z_i6IHm1LIU" title="CCGE Motivation"
             frameborder="0"
@@ -382,29 +386,38 @@
       <div class="column is-four-fifths">
         <h2 class="title is-2 has-text-centered is-size-4-mobile">Method</h2>
 
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/VSxV4YBePuU" title="CCGE Method"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="content">
+          <p>
+            <strong>Contact-Coverage Guided Exploration (CCGE)</strong> explicitly models hand–object interactions and
+            consists of <strong>three key components</strong>: a <strong>learned state hashing module</strong> that
+            discretizes continuous object states into compact state clusters, a <strong>contact coverage counter</strong>
+            that records state-conditioned finger–region interactions, and a <strong>structured exploration reward</strong>.
+          </p>
+          <p>
+            The exploration reward is decomposed into a <strong>contact coverage reward</strong>, which encourages
+            exploration of under-explored contact regions after contact occurs, and a
+            <strong>pre-contact energy-based reaching reward</strong>, which guides the policy toward unexplored object
+            regions to facilitate efficient contact discovery before physical interaction occurs. The current object
+            state and the goal state are visualized as colored point clouds, with colors indicating different object
+            surface regions.
+          </p>
         </div>
-        <div class="content">
-          <p>
-            CCGE proposes a contact-coverage guided exploration method 
-            that explicitly models hand–object interactions, consisting of three key components: 
-            a learned state hashing module that discretizes continuous object states into compact state clusters, 
-            a contact coverage counter that records state-conditioned finger–region interactions, and a structured exploration reward.
-          </p>
-        </div>        
-        <div class="content">
-          <p>
-            The exploration reward is further decomposed into a contact coverage reward, 
-            which encourages exploration of under-explored contact regions after contact occurs, 
-            and a pre-contact energy-based reaching reward, which guides the policy toward unexplored object regions, 
-            facilitating efficient contact discovery before physical interaction occurs. The current object state and the goal state are visualized as colored point clouds, 
-            with colors indicating different object surface regions.
-          </p>
-          <img src="./static/images/ccge_overview_update.png" alt="ccge_overview_update" />
+
+        <div class="columns is-variable is-5 is-vcentered">
+          <div class="column">
+            <figure>
+              <img src="./static/images/ccge_overview_update.png" alt="ccge_overview_update" />
+              <figcaption class="has-text-centered is-size-6">Figure. Overview of CCGE.</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/VSxV4YBePuU" title="CCGE Method"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -422,6 +435,15 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figure class="mt-5 mb-5">
+          <img src="./static/images/exp_plot.jpg" alt="Training curves across tasks" />
+          <figcaption class="has-text-centered is-size-6">Figure. Training curves across tasks.</figcaption>
+        </figure>
+        <div class="content">
+          <p>
+            We compare CCGE, against baselines on a range of challenging manipulation tasks. CCGE shows (i) more stable training across different random seeds, (ii) improved sample efficiency, and (iii) achieves higher task performance overall.
+          </p>
         </div>
       </div>
     </div>
