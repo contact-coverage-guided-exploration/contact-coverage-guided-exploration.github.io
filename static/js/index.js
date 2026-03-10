@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!view) {
         return;
       }
-      const nextSrc = `./ccge_media/real/${trial}/${trial}-${view}_web.mp4`;
+      const nextSrc = `./static/videos/ccge_media/real/${trial}/${trial}-${view}_web.mp4`;
       const source = video.querySelector('source');
       const currentSrc = (source && source.getAttribute('src')) || video.getAttribute('src') || video.currentSrc;
       video.pause();
