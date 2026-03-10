@@ -153,9 +153,12 @@
   <div class="hero-foot is-hidden-mobile">
     <nav class="tabs is-boxed is-fullwidth is-size-5">
       <ul>
-        <li><a href="#ccge">Contact-Coverage-Guided-Exploration</a></li>
+        <li><a href="#motivation">Motivation</a></li>
         <li><a href="#sim">Simulation Tasks</a></li>
         <li><a href="#real">Real-World Tasks</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#video">Video</a></li>
       </ul>
     </nav>
   </div>
@@ -164,60 +167,143 @@
 
 
 
-<section class="section is-medium" id="overview">
-  <div class="container is-max-desktop">
+<section class="section is-medium" id="motivation">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2 has-text-centered is-size-4-mobile">Motivation</h2>
     <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-justified is-hidden-mobile">
-        <h2 class="subtitle ">
-          CCGE is contact-centric exploration framework that encourages
-          dexterous hands to explore diverse hand–object contact patterns,
-          improving exploration in dexterous manipulation tasks.
-        </h2>
-        <br>
-        <h2 class="subtitle">
-          <strong>Importantly,</strong>
-          it can be directly integrated into existing reinforcement learning
-          pipelines with a plug-and-play reward.
-        </h2>
+      <div class="column is-four-fifths has-text-justified">
+        <!-- Add motivation content here. -->
       </div>
-
-      <div class="column is-four-fifths is-hidden-tablet has-text-justified-mobile">
-        <p>
-          CCGE is contact-centric exploration framework that encourages
-          dexterous hands to explore diverse hand–object contact patterns,
-          improving exploration in dexterous manipulation tasks.
-        </p>
-        <br>
-        <p>
-          <strong>Importantly,</strong>
-          it can be directly integrated into existing reinforcement learning
-          pipelines with a plug-and-play reward.
-        </p>
-      </div>
-
-
     </div>
   </div>
 </section>
 
 
-<section class="section" id="video">
-  <div class="container is-max-desktop">
-    <h2 class="title is-1 has-text-centered is-size-4-mobile">Technical Summary Video</h2>
-    <iframe width="100%" style="aspect-ratio: 16 / 9;" src="
-      https://youtu.be/4opkbcyq08o" title="CCGE Technical Summary Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<section class="section" id="sim">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2 has-text-centered is-size-4-mobile">Simulation Tasks</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <!-- Add simulation task content here. -->
+      </div>
+    </div>
   </div>
 </section>
 
 
-<section class="section is-small" id="hardware">
-  <div class="container is-max-desktop">
+<section class="section real-world-section" id="real">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2 has-text-centered is-size-4-mobile">Real-World Results</h2>
+    <p class="real-world-subtitle has-text-centered">
+      We evaluate the object singulation task in the real world with randomized target object. Videos are shown at 1x speed.
+    </p>
+
+    <div class="real-world-card">
+      <div class="real-world-card-header">
+        <div class="real-world-card-title">Baseline Policy</div>
+        <button class="replay-button" type="button" data-replay-target="#real-baseline" aria-label="Replay baseline videos">
+          <i class="fas fa-rotate-right"></i>
+        </button>
+      </div>
+      <div class="real-world-grid" id="real-baseline">
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_1/success_1-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_1/success_1-2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_1/success_1-3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="real-world-card-header">
+        <div class="real-world-card-title">CCGE Policy (Ours)</div>
+        <button class="replay-button" type="button" data-replay-target="#real-ours" aria-label="Replay CCGE videos">
+          <i class="fas fa-rotate-right"></i>
+        </button>
+      </div>
+      <div class="real-world-grid" id="real-ours">
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_2/success_2-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_2/success_2-2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="real-world-tile">
+          <video autoplay muted playsinline preload="metadata">
+            <source src="./ccge_media/real/success_2/success_2-3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-medium" id="abstract">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2 has-text-centered is-size-4-mobile">Abstract</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-justified is-hidden-mobile">
+        <p class="subtitle">
+          Deep Reinforcement learning (DRL) has achieved remarkable success in domains with well-defined reward
+          structures, such as Atari games and locomotion. In contrast, dexterous manipulation lacks general-purpose
+          reward formulations and typically depends on task-specific, handcrafted priors to guide hand–object
+          interactions. We propose Contact Coverage Guided Exploration (CCGE), a general exploration method designed
+          for general-purpose dexterous manipulation tasks. CCGE represents contact state as the intersection between
+          object surface points and predefined hand keypoints, encouraging dexterous hands to discover diverse and
+          novel contact patterns, namely which fingers contact which object regions. It maintains a contact counter
+          conditioned on discretized object states obtained via learned hash codes, capturing how frequently each
+          finger interacts with different object regions. This counter is leveraged in two complementary ways: (1) to
+          assign a count-based contact coverage reward that promotes exploration of novel contact patterns, and (2) an
+          energy-based reaching reward that guides the agent toward under-explored contact regions. We evaluate CCGE
+          on a diverse set of dexterous manipulation tasks, including cluttered object singulation, constrained object
+          retrieval, in-hand reorientation, and bimanual manipulation. Experimental results show that CCGE
+          substantially improves training efficiency and success rates over existing exploration methods, and that the
+          contact patterns learned with CCGE transfer robustly to real-world robotic systems.
+        </p>
+      </div>
+
+      <div class="column is-four-fifths is-hidden-tablet has-text-justified-mobile">
+        <p>
+          Deep Reinforcement learning (DRL) has achieved remarkable success in domains with well-defined reward
+          structures, such as Atari games and locomotion. In contrast, dexterous manipulation lacks general-purpose
+          reward formulations and typically depends on task-specific, handcrafted priors to guide hand–object
+          interactions. We propose Contact Coverage Guided Exploration (CCGE), a general exploration method designed
+          for general-purpose dexterous manipulation tasks. CCGE represents contact state as the intersection between
+          object surface points and predefined hand keypoints, encouraging dexterous hands to discover diverse and
+          novel contact patterns, namely which fingers contact which object regions. It maintains a contact counter
+          conditioned on discretized object states obtained via learned hash codes, capturing how frequently each
+          finger interacts with different object regions. This counter is leveraged in two complementary ways: (1) to
+          assign a count-based contact coverage reward that promotes exploration of novel contact patterns, and (2) an
+          energy-based reaching reward that guides the agent toward under-explored contact regions. We evaluate CCGE
+          on a diverse set of dexterous manipulation tasks, including cluttered object singulation, constrained object
+          retrieval, in-hand reorientation, and bimanual manipulation. Experimental results show that CCGE
+          substantially improves training efficiency and success rates over existing exploration methods, and that the
+          contact patterns learned with CCGE transfer robustly to real-world robotic systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small" id="method">
+  <div class="container is-max-widescreen">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-2 has-text-centered is-size-4-mobile">Contact-Coverage-Guided-Exploration</h2>
+        <h2 class="title is-2 has-text-centered is-size-4-mobile">Method</h2>
         <div class="content">
           <p>
             CCGE proposes a contact-coverage guided exploration method 
@@ -237,11 +323,20 @@
             with colors indicating different object surface regions.
           </p>
         </div>
-
-
-
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section" id="video">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-1 has-text-centered is-size-4-mobile">Technical Summary Video</h2>
+    <iframe width="100%" style="aspect-ratio: 16 / 9;" src="
+      https://youtu.be/4opkbcyq08o" title="CCGE Technical Summary Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
 
